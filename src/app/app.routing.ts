@@ -1,6 +1,9 @@
 import {Routes} from '@angular/router';
 import {AdminComponent} from './layout/admin/admin.component';
 import {AuthComponent} from './layout/auth/auth.component';
+import { 
+  AuthGuardService as AuthGuard 
+} from './service/auth-guard/auth-guard.service';
 
 export const AppRoutes: Routes = [
   {
@@ -72,7 +75,8 @@ export const AppRoutes: Routes = [
         path: 'simple-page',
         loadChildren: './pages/simple-page/simple-page.module#SimplePageModule'
       }
-    ]
+    ],
+    canActivate: [AuthGuard] 
   }, {
     path: '',
     component: AuthComponent,

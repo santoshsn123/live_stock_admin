@@ -12,6 +12,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {BreadcrumbsComponent} from './layout/admin/breadcrumbs/breadcrumbs.component';
 import {TitleComponent} from './layout/admin/title/title.component';
 import {AuthComponent} from './layout/auth/auth.component';
+import { AuthGuardService } from './service/auth-guard/auth-guard.service';
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import {AuthComponent} from './layout/auth/auth.component';
     ClickOutsideModule,
     SharedModule
   ],
-  providers: [],
+  providers: [AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
