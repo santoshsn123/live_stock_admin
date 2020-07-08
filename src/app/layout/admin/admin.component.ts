@@ -1,6 +1,7 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {animate, AUTO_STYLE, state, style, transition, trigger} from '@angular/animations';
 import {MenuItems} from '../../shared/menu-items/menu-items';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin',
@@ -97,12 +98,12 @@ export class AdminComponent implements OnInit {
   configOpenRightBar: string;
   isSidebarChecked: boolean;
   isHeaderChecked: boolean;
-
+  admin;
   @ViewChild('searchFriends') search_friends: ElementRef;
 /*  @ViewChild('toggleButton') toggle_button: ElementRef;
   @ViewChild('sideMenu') side_menu: ElementRef;*/
 
-  constructor(public menuItems: MenuItems) {
+  constructor(public menuItems: MenuItems, private router:Router) {
     this.navType = 'st2';
     this.themeLayout = 'vertical';
     this.vNavigationView = 'view1';
@@ -147,6 +148,8 @@ export class AdminComponent implements OnInit {
 
   ngOnInit() {
     this.setBackgroundPattern('pattern2');
+    this.admin = JSON.parse(localStorage.getItem('login-session'));
+    console.log(this.admin);
   }
 
   onResize(event) {
@@ -164,7 +167,10 @@ export class AdminComponent implements OnInit {
       this.setMenuAttributes(this.windowWidth);
     }
   }
-
+logout =()=>{
+  localStorage.clear();
+  this.router.navigate(['/authentication/login/with-bg-image'])
+}
   setMenuAttributes(windowWidth) {
     if (windowWidth >= 768 && windowWidth <= 1024) {
       this.deviceType = 'tablet';

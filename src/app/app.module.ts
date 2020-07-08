@@ -13,7 +13,9 @@ import {BreadcrumbsComponent} from './layout/admin/breadcrumbs/breadcrumbs.compo
 import {TitleComponent} from './layout/admin/title/title.component';
 import {AuthComponent} from './layout/auth/auth.component';
 import { AuthGuardService } from './service/auth-guard/auth-guard.service';
-
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
+import { AuthenticationService } from './service/authentication/authentication.service';
+import { CommonService } from './service/common/common.service';
 
 @NgModule({
   declarations: [
@@ -28,9 +30,10 @@ import { AuthGuardService } from './service/auth-guard/auth-guard.service';
     BrowserAnimationsModule,
     RouterModule.forRoot(AppRoutes),
     ClickOutsideModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ],
-  providers: [AuthGuardService],
+  providers: [AuthGuardService,AuthenticationService,CommonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

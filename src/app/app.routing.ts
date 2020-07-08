@@ -12,48 +12,51 @@ export const AppRoutes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'dashboard/default',
+        redirectTo: 'dashboard',
         pathMatch: 'full'
       }, {
         path: 'dashboard',
         loadChildren: './pages/dashboard/dashboard.module#DashboardModule'
-      }, {
-        path: 'widget',
+      }, 
+      {
+        path: 'category',
         loadChildren: './pages/widget/widget.module#WidgetModule'
-      }, {
-        path: 'basic',
-        loadChildren: './pages/ui-elements/basic/basic.module#BasicModule'
-      }, {
-        path: 'advance',
-        loadChildren: './pages/ui-elements/advance/advance.module#AdvanceModule'
-      }, {
-        path: 'animations',
-        loadChildren: './pages/animations/animations.module#AnimationsModule'
-      }, {
-        path: 'forms',
-        loadChildren: './pages/ui-elements/forms/forms.module#FormsModule'
-      }, {
-        path: 'bootstrap-table',
-        loadChildren: './pages/ui-elements/tables/bootstrap-table/bootstrap-table.module#BootstrapTableModule',
-      }, {
-        path: 'data-table',
-        loadChildren: './pages/ui-elements/tables/data-table/data-table.module#DataTableModule',
-      }, {
-        path: 'charts',
-        loadChildren: './pages/charts/charts.module#ChartsModule',
-      }, {
-        path: 'map',
-        loadChildren: './pages/map/map.module#MapModule',
-      }, {
-        path: 'maintenance/error',
-        loadChildren: './pages/maintenance/error/error.module#ErrorModule'
-      }, {
-        path: 'maintenance/coming-soon',
-        loadChildren: './pages/maintenance/coming-soon/coming-soon.module#ComingSoonModule'
-      }, {
-        path: 'user',
-        loadChildren: './pages/user/user.module#UserModule'
-      }, {
+      }, 
+      // {
+      //   path: 'basic',
+      //   loadChildren: './pages/ui-elements/basic/basic.module#BasicModule'
+      // }, {
+      //   path: 'advance',
+      //   loadChildren: './pages/ui-elements/advance/advance.module#AdvanceModule'
+      // }, {
+      //   path: 'animations',
+      //   loadChildren: './pages/animations/animations.module#AnimationsModule'
+      // }, {
+      //   path: 'forms',
+      //   loadChildren: './pages/ui-elements/forms/forms.module#FormsModule'
+      // }, {
+      //   path: 'bootstrap-table',
+      //   loadChildren: './pages/ui-elements/tables/bootstrap-table/bootstrap-table.module#BootstrapTableModule',
+      // }, {
+      //   path: 'data-table',
+      //   loadChildren: './pages/ui-elements/tables/data-table/data-table.module#DataTableModule',
+      // }, {
+      //   path: 'charts',
+      //   loadChildren: './pages/charts/charts.module#ChartsModule',
+      // }, {
+      //   path: 'map',
+      //   loadChildren: './pages/map/map.module#MapModule',
+      // }, {
+      //   path: 'maintenance/error',
+      //   loadChildren: './pages/maintenance/error/error.module#ErrorModule'
+      // }, {
+      //   path: 'maintenance/coming-soon',
+      //   loadChildren: './pages/maintenance/coming-soon/coming-soon.module#ComingSoonModule'
+      // }, {
+      //   path: 'user',
+      //   loadChildren: './pages/user/user.module#UserModule'
+      // }, 
+      {
         path: 'crm-contact',
         loadChildren: './pages/ui-elements/crm-contact/crm-contact.module#CrmContactModule'
       }, {

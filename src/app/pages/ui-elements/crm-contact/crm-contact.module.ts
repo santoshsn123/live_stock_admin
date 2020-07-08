@@ -11,7 +11,7 @@ export const CRMContactRoutes: Routes = [{
   path: '',
   component: CrmContactComponent,
   data: {
-    breadcrumb: 'CRM Contact',
+    breadcrumb: 'User Management',
     icon: 'icofont-contacts bg-c-pink'
   }
 }];

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Http} from '@angular/http';
+import { AuthenticationService } from '../../../service/authentication/authentication.service';
 
 @Component({
   selector: 'app-crm-contact',
@@ -13,13 +14,17 @@ export class CrmContactComponent implements OnInit {
   public sortBy = '';
   public sortOrder = 'desc';
 
-  constructor(public http: Http) { }
+  constructor(public http: Http,private auth:AuthenticationService) { }
 
   ngOnInit() {
-    this.http.get(`assets/data/crm-contact.json`)
-      .subscribe((data) => {
-        this.data = data.json();
-      });
+    this.auth.getUsers().subscribe(data=>{
+    this.data = data;
+    console.log("User Data here :- ",data);
+  })
+    // this.http.get(`assets/data/crm-contact.json`)
+    //   .subscribe((data) => {
+    //     this.data = data.json();
+    //   });
   }
 
   openMyModal(event) {

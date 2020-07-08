@@ -6,6 +6,7 @@ import { WithHeaderFooterComponent } from './with-header-footer/with-header-foot
 import { WithSocialComponent } from './with-social/with-social.component';
 import { WithSocialHeaderFooterComponent } from './with-social-header-footer/with-social-header-footer.component';
 import {SharedModule} from '../../../shared/shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 export const LoginRoutes: Routes = [
   {
@@ -20,25 +21,26 @@ export const LoginRoutes: Routes = [
         data: {
           breadcrumb: 'Login'
         }
-      }, {
-        path: 'with-header-footer',
-        component: WithHeaderFooterComponent,
-        data: {
-          breadcrumb: 'Login'
-        }
-      }, {
-        path: 'with-social',
-        component: WithSocialComponent,
-        data: {
-          breadcrumb: 'Login'
-        }
-      }, {
-        path: 'with-social-header-footer',
-        component: WithSocialHeaderFooterComponent,
-        data: {
-          breadcrumb: 'Login'
-        }
       }
+      // , {
+      //   path: 'with-header-footer',
+      //   component: WithHeaderFooterComponent,
+      //   data: {
+      //     breadcrumb: 'Login'
+      //   }
+      // }, {
+      //   path: 'with-social',
+      //   component: WithSocialComponent,
+      //   data: {
+      //     breadcrumb: 'Login'
+      //   }
+      // }, {
+      //   path: 'with-social-header-footer',
+      //   component: WithSocialHeaderFooterComponent,
+      //   data: {
+      //     breadcrumb: 'Login'
+      //   }
+      // }
     ]
   }
 ];
@@ -47,8 +49,9 @@ export const LoginRoutes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(LoginRoutes),
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ],
-  declarations: [WithBgImageComponent, WithHeaderFooterComponent, WithSocialComponent, WithSocialHeaderFooterComponent]
+  declarations: [WithBgImageComponent]
 })
 export class LoginModule { }
