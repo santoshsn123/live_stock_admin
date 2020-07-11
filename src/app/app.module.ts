@@ -16,6 +16,10 @@ import { AuthGuardService } from './service/auth-guard/auth-guard.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { AuthenticationService } from './service/authentication/authentication.service';
 import { CommonService } from './service/common/common.service';
+import { CategoryComponent } from './pages/calculator/category/category.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CalculatorService } from './service/calculator/calculator.service';
+import { AnimalsComponent } from './pages/calculator/animals/animals.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,9 @@ import { CommonService } from './service/common/common.service';
     AdminComponent,
     BreadcrumbsComponent,
     TitleComponent,
-    AuthComponent
+    AuthComponent,
+    CategoryComponent,
+    AnimalsComponent
   ],
   imports: [
     BrowserModule,
@@ -31,9 +37,10 @@ import { CommonService } from './service/common/common.service';
     RouterModule.forRoot(AppRoutes),
     ClickOutsideModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [AuthGuardService,AuthenticationService,CommonService],
+  providers: [AuthGuardService,AuthenticationService,CommonService,CalculatorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

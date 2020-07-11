@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import { WithBgImageComponent } from './with-bg-image/with-bg-image.component';
-import { WithHeaderFooterComponent } from './with-header-footer/with-header-footer.component';
-import { WithSocialComponent } from './with-social/with-social.component';
-import { WithSocialHeaderFooterComponent } from './with-social-header-footer/with-social-header-footer.component';
+// import { WithHeaderFooterComponent } from './with-header-footer/with-header-footer.component';
+// import { WithSocialComponent } from './with-social/with-social.component';
+// import { WithSocialHeaderFooterComponent } from './with-social-header-footer/with-social-header-footer.component';
 import {SharedModule} from '../../../shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
 

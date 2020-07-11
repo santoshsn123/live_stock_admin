@@ -4,6 +4,8 @@ import {AuthComponent} from './layout/auth/auth.component';
 import { 
   AuthGuardService as AuthGuard 
 } from './service/auth-guard/auth-guard.service';
+import { CategoryComponent } from './pages/calculator/category/category.component';
+import { AnimalsComponent } from './pages/calculator/animals/animals.component';
 
 export const AppRoutes: Routes = [
   {
@@ -20,7 +22,13 @@ export const AppRoutes: Routes = [
       }, 
       {
         path: 'category',
-        loadChildren: './pages/widget/widget.module#WidgetModule'
+        component:CategoryComponent
+        // loadChildren: './pages/calculator/category/category.componet'
+      }, 
+      {
+        path: 'animals',
+        component:AnimalsComponent
+        // loadChildren: './pages/calculator/category/category.componet'
       }, 
       // {
       //   path: 'basic',
