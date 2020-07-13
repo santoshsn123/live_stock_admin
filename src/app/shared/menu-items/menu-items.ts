@@ -532,6 +532,13 @@ const MENUITEMS = [
         name: 'Animals Management',
         type: 'link',
         icon: 'ti-list',
+      },
+      {
+        state: 'trailer',
+        short_label: 'C',
+        name: 'Trailer Management',
+        type: 'link',
+        icon: 'ti-direction-alt',
       }
       // ,
       // {

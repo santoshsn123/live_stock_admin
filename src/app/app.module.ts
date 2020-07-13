@@ -20,6 +20,7 @@ import { CategoryComponent } from './pages/calculator/category/category.componen
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CalculatorService } from './service/calculator/calculator.service';
 import { AnimalsComponent } from './pages/calculator/animals/animals.component';
+import { TrailerComponent } from './pages/calculator/trailer/trailer.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { AnimalsComponent } from './pages/calculator/animals/animals.component';
     TitleComponent,
     AuthComponent,
     CategoryComponent,
-    AnimalsComponent
+    AnimalsComponent,
+    TrailerComponent
   ],
   imports: [
     BrowserModule,

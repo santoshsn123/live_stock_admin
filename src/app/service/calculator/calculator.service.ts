@@ -28,4 +28,13 @@ export class CalculatorService {
   deleteCategory=id=>{
     return this.http.post(this.common.baseUrl + "?action=deleteCategory",id);
   }
+  addTrailer = data=>{
+    return this.http.post(this.common.baseUrl + "?action=addAdminTrailer",data);
+  }
+  getAllTrailers = () =>{
+    return this.http.get(this.common.baseUrl + "?action=getAllTrailers");
+  }
+  deleteTrailer=id=>{
+    return this.http.post(this.common.baseUrl + "?action=deleteTrailer",id);
+  }
 }

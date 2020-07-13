@@ -6,6 +6,7 @@ import {
 } from './service/auth-guard/auth-guard.service';
 import { CategoryComponent } from './pages/calculator/category/category.component';
 import { AnimalsComponent } from './pages/calculator/animals/animals.component';
+import { TrailerComponent } from './pages/calculator/trailer/trailer.component';
 
 export const AppRoutes: Routes = [
   {
@@ -28,6 +29,11 @@ export const AppRoutes: Routes = [
       {
         path: 'animals',
         component:AnimalsComponent
+        // loadChildren: './pages/calculator/category/category.componet'
+      }, 
+      {
+        path: 'trailer',
+        component:TrailerComponent
         // loadChildren: './pages/calculator/category/category.componet'
       }, 
       // {
