@@ -23,7 +23,8 @@ export const formValidationRoutes: Routes = [
     RouterModule.forChild(formValidationRoutes),
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   declarations: [FormValidationComponent]
 })

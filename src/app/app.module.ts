@@ -17,7 +17,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { AuthenticationService } from './service/authentication/authentication.service';
 import { CommonService } from './service/common/common.service';
 import { CategoryComponent } from './pages/calculator/category/category.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CalculatorService } from './service/calculator/calculator.service';
 import { AnimalsComponent } from './pages/calculator/animals/animals.component';
 
@@ -38,7 +38,8 @@ import { AnimalsComponent } from './pages/calculator/animals/animals.component';
     ClickOutsideModule,
     SharedModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [AuthGuardService,AuthenticationService,CommonService,CalculatorService],
   bootstrap: [AppComponent]

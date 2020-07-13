@@ -36,7 +36,8 @@ export const AuthenticationRoutes: Routes = [
     CommonModule,
     RouterModule.forChild(AuthenticationRoutes),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   declarations: []
 })
