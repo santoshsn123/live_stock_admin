@@ -7,6 +7,7 @@ import {
 import { CategoryComponent } from './pages/calculator/category/category.component';
 import { AnimalsComponent } from './pages/calculator/animals/animals.component';
 import { TrailerComponent } from './pages/calculator/trailer/trailer.component';
+import { DashboardCustomComponent } from './pages/dashboard-custom/dashboard-custom.component';
 
 export const AppRoutes: Routes = [
   {
@@ -19,7 +20,8 @@ export const AppRoutes: Routes = [
         pathMatch: 'full'
       }, {
         path: 'dashboard',
-        loadChildren: './pages/dashboard/dashboard.module#DashboardModule'
+        component:DashboardCustomComponent
+        // loadChildren: './pages/dashboard/dashboard.module#DashboardModule'
       }, 
       {
         path: 'category',

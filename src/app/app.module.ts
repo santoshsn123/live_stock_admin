@@ -21,6 +21,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CalculatorService } from './service/calculator/calculator.service';
 import { AnimalsComponent } from './pages/calculator/animals/animals.component';
 import { TrailerComponent } from './pages/calculator/trailer/trailer.component';
+import { DashboardCustomComponent } from './pages/dashboard-custom/dashboard-custom.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { TrailerComponent } from './pages/calculator/trailer/trailer.component';
     AuthComponent,
     CategoryComponent,
     AnimalsComponent,
-    TrailerComponent
+    TrailerComponent,
+    DashboardCustomComponent
   ],
   imports: [
     BrowserModule,
