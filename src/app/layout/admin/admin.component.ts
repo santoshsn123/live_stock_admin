@@ -169,7 +169,7 @@ export class AdminComponent implements OnInit {
   }
 logout =()=>{
   localStorage.clear();
-  this.router.navigate(['/authentication/login/with-bg-image'])
+  this.router.navigate(['/login'])
 }
   setMenuAttributes(windowWidth) {
     if (windowWidth >= 768 && windowWidth <= 1024) {

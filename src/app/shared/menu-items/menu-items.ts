@@ -486,7 +486,7 @@ const MENUITEMS = [
         icon: 'ti-home',
       },
       {
-        state: 'crm-contact',
+        state: 'users',
         short_label: 'C',
         name: 'User Management',
         type: 'link',
@@ -517,7 +517,7 @@ const MENUITEMS = [
     ]
   },
   {
-    label: 'Calculator',
+    label: 'Livestock Type',
     main: [
       {
         state: 'category',
@@ -532,13 +532,6 @@ const MENUITEMS = [
         name: 'Animals Management',
         type: 'link',
         icon: 'ti-list',
-      },
-      {
-        state: 'trailer',
-        short_label: 'C',
-        name: 'Trailer Management',
-        type: 'link',
-        icon: 'ti-direction-alt',
       }
       // ,
       // {
@@ -582,6 +575,26 @@ const MENUITEMS = [
       // }
     ]
   },
+  {
+    label:'Trailer',
+    main:[ {
+      state: 'trailer',
+      short_label: 'C',
+      name: 'Trailer Management',
+      type: 'link',
+      icon: 'ti-direction-alt',
+    }]
+  },
+  // {
+  //   label:'Logout',
+  //   main:[ {
+  //     state: 'logout',
+  //     short_label: 'C',
+  //     name: 'Logout',
+  //     type: 'link',
+  //     icon: 'ti-power-off',
+  //   }]
+  // },
   // {
   //   label: 'Other',
   //   main: [

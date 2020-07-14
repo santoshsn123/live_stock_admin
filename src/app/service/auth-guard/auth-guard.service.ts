@@ -8,7 +8,7 @@ export class AuthGuardService {
   
   canActivate(): boolean {
     if (!localStorage.getItem('login-session')) {
-      this.router.navigate(['/authentication/login/with-bg-image']);
+      this.router.navigate(['/login']);
       return false;
     }
     return true;

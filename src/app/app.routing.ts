@@ -71,7 +71,7 @@ export const AppRoutes: Routes = [
       //   loadChildren: './pages/user/user.module#UserModule'
       // }, 
       {
-        path: 'crm-contact',
+        path: 'users',
         loadChildren: './pages/ui-elements/crm-contact/crm-contact.module#CrmContactModule'
       }, {
         path: 'task',
@@ -99,12 +99,15 @@ export const AppRoutes: Routes = [
     component: AuthComponent,
     children: [
       {
-        path: 'authentication',
+        path: 'login',
         loadChildren: './pages/authentication/authentication.module#AuthenticationModule'
       }, {
         path: 'maintenance/offline-ui',
         loadChildren: './pages/maintenance/offline-ui/offline-ui.module#OfflineUiModule'
       }
     ]
+  },
+  {
+    path:'**', redirectTo: '/login'
   }
 ];

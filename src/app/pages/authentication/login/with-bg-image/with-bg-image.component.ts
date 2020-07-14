@@ -12,7 +12,13 @@ export class WithBgImageComponent implements OnInit {
   loginForm:FormGroup;
   submitted:boolean=false;
   userData;
-  constructor(private fb:FormBuilder,private auth:AuthenticationService,private route:Router) { }
+  constructor(private fb:FormBuilder,private auth:AuthenticationService,private route:Router) {
+    
+    if(localStorage.getItem('login-session'))
+    {
+      route.navigate(['dashboard']);
+    }
+   }
   get f() {
     // console.log(this.registerForm.controls);
     return this.loginForm.controls;

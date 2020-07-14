@@ -16,7 +16,7 @@ export const LoginRoutes: Routes = [
     },
     children: [
       {
-        path: 'with-bg-image',
+        path: '',
         component: WithBgImageComponent,
         data: {
           breadcrumb: 'Login'
