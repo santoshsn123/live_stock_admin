@@ -22,6 +22,7 @@ import { CalculatorService } from './service/calculator/calculator.service';
 import { AnimalsComponent } from './pages/calculator/animals/animals.component';
 import { TrailerComponent } from './pages/calculator/trailer/trailer.component';
 import { DashboardCustomComponent } from './pages/dashboard-custom/dashboard-custom.component';
+import { MembershipComponent } from './pages/membership/membership.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { DashboardCustomComponent } from './pages/dashboard-custom/dashboard-cus
     CategoryComponent,
     AnimalsComponent,
     TrailerComponent,
-    DashboardCustomComponent
+    DashboardCustomComponent,
+    MembershipComponent
   ],
   imports: [
     BrowserModule,

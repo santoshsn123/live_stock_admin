@@ -8,6 +8,7 @@ import { CategoryComponent } from './pages/calculator/category/category.componen
 import { AnimalsComponent } from './pages/calculator/animals/animals.component';
 import { TrailerComponent } from './pages/calculator/trailer/trailer.component';
 import { DashboardCustomComponent } from './pages/dashboard-custom/dashboard-custom.component';
+import { MembershipComponent } from './pages/membership/membership.component';
 
 export const AppRoutes: Routes = [
   {
@@ -36,6 +37,11 @@ export const AppRoutes: Routes = [
       {
         path: 'trailer',
         component:TrailerComponent
+        // loadChildren: './pages/calculator/category/category.componet'
+      }, 
+      {
+        path: 'membership',
+        component:MembershipComponent
         // loadChildren: './pages/calculator/category/category.componet'
       }, 
       // {

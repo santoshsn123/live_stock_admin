@@ -37,4 +37,10 @@ export class CalculatorService {
   deleteTrailer=id=>{
     return this.http.post(this.common.baseUrl + "?action=deleteTrailer",id);
   }
+  getMembership = () =>{
+    return this.http.get(this.common.baseUrl + "?action=getMembership");
+  }
+  updateMembership = (data) =>{
+    return this.http.post(this.common.baseUrl + "?action=updateMembership",data);
+  }
 }

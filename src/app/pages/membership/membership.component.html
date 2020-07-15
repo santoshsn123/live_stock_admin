@@ -1,0 +1,43 @@
+<form [formGroup]="memForm" (ngSubmit)="onSubmit()">
+  <div class="comparison">
+
+    <table>
+      <thead>
+        <tr>
+          <th class="tl tl2"></th>
+          <th class="qbse">
+            FREE
+          </th>
+          <th class="qbo">
+            PREMIUM
+          </th>
+        </tr>
+      </thead>
+      <tbody formArrayName="mem_data">
+        <!-- *ngFor="let mem of membership; let i=index;" [checked]="mem.m_free==1?true:false" [checked]="mem.m_premium==1?true:false" -->
+       
+
+        <tr *ngFor="let mem of memPoints.controls; let i = index" [formGroupName]="i" [ngClass]="(i%2==0)?'compare-row':''">
+          <td>{{membership[i].m_title}}</td>
+          <td class="td-center-middle"><input formControlName="m_free"  type="checkbox" id="no-contact"
+              name="m_free" value=""></td>
+          <td class="td-center-middle"><input formControlName="m_premium"  type="checkbox" id="no-contact"
+              name="m_premium" value=""></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="my-button" id="button-6">
+        <div id="spin"></div>
+        <a href="javascript:void(0);" (click)="onSubmit();" class="my-a">SAVE</a>
+      </div>
+      <div class="my-button btn-black" id="button-6">
+        <div id="spin"></div>
+        <a href="javascript:void(0);"  class="my-a">RESET</a>
+      </div>
+    </div>
+  </div>
+</form>

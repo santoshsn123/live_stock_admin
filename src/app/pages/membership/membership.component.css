@@ -1,0 +1,119 @@
+.comparison {
+    max-width: 940px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    margin-top: 50px;
+}
+.comparison .tl2 {
+    border-right: 0;
+}
+.comparison .qbse, .comparison .qbo, .comparison .tl {
+    color: #FFF;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    border-right: 1px solid #CCC;
+    border-bottom: 0;
+    letter-spacing: 3px;
+}
+.comparison th {
+    font-weight: normal;
+    padding: 0;
+    border-bottom: 1px solid #CCC;
+}
+
+
+th {
+    text-align: center !important;
+}
+
+.comparison .qbse {
+    background: #433f33;
+    border-top-left-radius: 3px;
+    border-left: 0px;
+}
+.comparison .qbo {
+    background: #EAC547;
+    border-top-right-radius: 3px;
+    border-right: 0px;
+}
+
+.comparison .compare-row {
+    background: #F5F5F5;
+}
+
+.comparison table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+    border-bottom: 1px solid #CCC;
+}
+
+.td-center-middle {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.comparison td, .comparison th {
+    border-right: 1px solid #CCC;
+    empty-cells: show;
+    padding: 10px;
+    font-size: 16px;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.td-center-middle input[type="checkbox" i] {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+
+
+#button-6 {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.my-button {
+    display: inline-flex;
+    height: 40px;
+    width: 150px;
+    background: #EAC547;
+    margin: 20px 20px 20px 20px;
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .8em;
+    letter-spacing: 1.5px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    outline: none !important;
+}
+
+.btn-black {
+    background: #433f33 !important;
+}
+
+#button-6 a {
+    position: relative;
+    transition: all .45s ease-Out;
+    color: #fff;
+}
+.my-a {
+    color: #EAC547;
+    text-decoration: none !important;
+}
