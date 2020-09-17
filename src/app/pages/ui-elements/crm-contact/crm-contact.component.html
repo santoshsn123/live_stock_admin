@@ -10,7 +10,7 @@
         <div id="crm-contact" class="dt-responsive">
           <div class="row">
             <div class="col-xs-12 col-sm-12 col-sm-12 col-md-6">
-              <!-- <div>
+              <div>
                 <label class="label-control">Show
                   <select class="form-control input-sm full-data-show-entry" [(ngModel)]="rowsOnPage">
                     <option [ngValue]="10">10</option>
@@ -20,15 +20,15 @@
                   </select>
                   entries
                 </label>
-              </div> -->
+              </div>
             </div>
-            <!-- <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="col-xs-12 col-sm-12 col-md-6">
               <div style="text-align: right;">
                 <label>Search:
                   <input type="search" [(ngModel)]="filterQuery" class="form-control input-sm full-data-search" placeholder="Search name">
                 </label>
               </div>
-            </div> -->
+            </div>
           </div>
           <!-- <div class="panel-heading">User information</div>-->
           <div class="table-responsive">
@@ -40,39 +40,42 @@
                   <mfDefaultSorter  by="image">Profile</mfDefaultSorter>
                 </th>
                 <th>
-                  <mfDefaultSorter  by="name">Name</mfDefaultSorter>
+                  <mfDefaultSorter  by="u_fullname">Name</mfDefaultSorter>
                 </th>
                 <th>
-                  <mfDefaultSorter  by="email">Email</mfDefaultSorter>
+                  <mfDefaultSorter  by="u_email">Email</mfDefaultSorter>
                 </th>
                 <th>
-                  <mfDefaultSorter  by="position">Company</mfDefaultSorter>
+                  <mfDefaultSorter  by="u_company">Company</mfDefaultSorter>
                 </th>
                 <th>
-                  <mfDefaultSorter by="office">About</mfDefaultSorter>
+                  <mfDefaultSorter by="u_about">About</mfDefaultSorter>
                 </th>
                 <th>
-                  <mfDefaultSorter  by="age">Mobile No.</mfDefaultSorter>
+                  <mfDefaultSorter  by="u_mobileno">Mobile No.</mfDefaultSorter>
                 </th>
-                <!-- <th>
+                <th>
                   <mfDefaultSorter>Action</mfDefaultSorter>
-                </th> -->
+                </th>
               </tr>
               <tr>
               </tr>
               </thead>
               <tbody>
               <tr *ngFor="let item of mf.data">
-                <td><img src="{{item.u_image}}" class="d-inline-block img-circle " alt="tbl"></td>
+                <td>
+                  <div class="initials" *ngIf='item.showinitials'><span style="text-align: center;">{{item.initials}}</span></div>
+                  <img *ngIf='!item.showinitials' src="{{item.u_image}}" class="d-inline-block img-circle " alt="tbl">
+                </td>
                 <td>{{item.u_fullname}}</td>
                 <td>{{item.u_email}}</td>
                 <td>{{item.u_company}}</td>
                 <td>{{item.u_about}}</td>
                 <td>{{item.u_mobileno}}</td>
-                <!-- <td class="action-icon">
-                  <a href="javascript:;" class="m-r-15 crm-action-edit text-muted text-primary"><i class="icofont icofont-ui-edit"></i></a>
-                  <a href="javascript:;" class="crm-action-delete text-muted text-danger"><i class="icofont icofont-delete-alt"></i></a>
-                </td> -->
+                <td class="action-icon">
+                  <a href="javascript:void(0);" routerLink="/users/details/{{item.u_token}}" class="m-r-15 crm-action-edit text-muted text-primary"><i class="icofont icofont-brand-flikr text-muted"></i></a>
+                  <a href="javascript:void(0);" (click)="deleteUser(item)" class="crm-action-delete text-muted text-danger"><i class="icofont icofont-delete-alt"></i></a>
+                </td>
               </tr>
               </tbody>
               <tfoot>
@@ -85,7 +88,7 @@
                 <th>Mobile No.</th>
               </tr> -->
               <tr>
-                <td colspan="10">
+                <td colspan="7">
                   <mfBootstrapPaginator class="pagination-main f-right"></mfBootstrapPaginator>
                 </td>
               </tr>

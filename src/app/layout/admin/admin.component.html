@@ -422,7 +422,7 @@
                 <span class="search-icon"><i class="ti-search" aria-hidden="true"></i></span>
               </div>
             </div> -->
-            <div slimScroll width="100%" height="calc(100% - 80px)" size="4px" color="#fff" opacity="0.3" allowPageScroll="false">
+            <div slimScroll width="100%" style="height: 100% !important;" height="100%" size="4px" color="#fff" opacity="0.3" allowPageScroll="false">
               <div *ngFor="let asideItems of menuItems.getAll()" class="d-color">
                 <div class="pcoded-navigatio-lavel" [attr.menu-title-theme]="menuTitleTheme">{{asideItems.label}}</div>
                 <ul class="pcoded-item pcoded-left-item" [attr.item-border]="itemBorder" [attr.item-border-style]="itemBorderStyle" [attr.subitem-border]="subItemBorder" *ngFor="let asideItem of asideItems.main" appAccordionLink group="{{asideItem.state}}">

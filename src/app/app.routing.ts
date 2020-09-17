@@ -9,6 +9,8 @@ import { AnimalsComponent } from './pages/calculator/animals/animals.component';
 import { TrailerComponent } from './pages/calculator/trailer/trailer.component';
 import { DashboardCustomComponent } from './pages/dashboard-custom/dashboard-custom.component';
 import { MembershipComponent } from './pages/membership/membership.component';
+import { UserDetailsComponent } from './pages/user-details/user-details.component';
+import { LoadsCommanPageComponent } from './pages/loads-comman-page/loads-comman-page.component';
 
 export const AppRoutes: Routes = [
   {
@@ -37,6 +39,11 @@ export const AppRoutes: Routes = [
       {
         path: 'trailer',
         component:TrailerComponent
+        // loadChildren: './pages/calculator/category/category.componet'
+      }, 
+      {
+        path: 'loads',
+        component:LoadsCommanPageComponent
         // loadChildren: './pages/calculator/category/category.componet'
       }, 
       {
@@ -81,6 +88,10 @@ export const AppRoutes: Routes = [
       {
         path: 'users',
         loadChildren: './pages/ui-elements/crm-contact/crm-contact.module#CrmContactModule'
+      },
+      {
+        path: 'users/details/:token',
+        component:UserDetailsComponent
       }, {
         path: 'task',
         loadChildren: './pages/task/task.module#TaskModule'

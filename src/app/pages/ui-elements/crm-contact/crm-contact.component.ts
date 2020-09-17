@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Http} from '@angular/http';
 import { AuthenticationService } from '../../../service/authentication/authentication.service';
+import { CommonService } from '../../../service/common/common.service';
 
 @Component({
   selector: 'app-crm-contact',
@@ -14,17 +15,21 @@ export class CrmContactComponent implements OnInit {
   public sortBy = '';
   public sortOrder = 'desc';
 
-  constructor(public http: Http,private auth:AuthenticationService) { }
+  constructor(public http: Http,private auth:AuthenticationService,private _common:CommonService) { }
 
   ngOnInit() {
+  this.getAllusers();
+  }
+
+  getAllusers = ()=>{
     this.auth.getUsers().subscribe(data=>{
-    this.data = data;
-    console.log("User Data here :- ",data);
-  })
-    // this.http.get(`assets/data/crm-contact.json`)
-    //   .subscribe((data) => {
-    //     this.data = data.json();
-    //   });
+      this.data = data;
+      this.data.map(dt=>{
+        dt.showinitials = dt.u_image.split("/")[dt.u_image.split("/").length-1]=='default.png';
+        dt.initials = this._common.getInitials(dt.u_fullname);
+        return dt;
+      });
+    })
   }
 
   openMyModal(event) {
@@ -34,5 +39,13 @@ export class CrmContactComponent implements OnInit {
   closeMyModal(event) {
     ((event.target.parentElement.parentElement).parentElement).classList.remove('md-show');
   }
-
+  deleteUser=(user)=>{
+    if(confirm("Do you really want to delete this record?"))
+    {
+      this.auth.deleteUser(user.u_id).subscribe(data=>{
+        this.getAllusers();
+        alert("Record Deleted Successfully!!");
+      })
+    }
+  }
 }

@@ -1,0 +1,17 @@
+.bg-l-yellow {
+    background-color: #EAC547;
+}
+.bg-l-black {
+    background-color: #433F33;
+}
+
+a{
+    color: inherit;
+}
+a:hover{
+    color:#EAC547
+}
+.pcoded-inner-content{
+    padding: 0;
+    margin: -12px;
+}

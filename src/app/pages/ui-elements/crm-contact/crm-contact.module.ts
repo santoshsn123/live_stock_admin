@@ -9,11 +9,7 @@ import {DataTableModule} from 'angular2-datatable';
 
 export const CRMContactRoutes: Routes = [{
   path: '',
-  component: CrmContactComponent,
-  data: {
-    breadcrumb: 'User Management',
-    icon: 'icofont-contacts bg-c-pink'
-  }
+  component: CrmContactComponent
 }];
 
 @NgModule({

@@ -1,0 +1,105 @@
+<div class="pcoded-inner-content"  style="margin: -25px;">
+  <div class="main-body">
+    <div class="page-wrapper">
+      <div class="page-body">
+        <div class="row">
+          <!-- card1 start -->
+          <div class="col-md-6 col-xl-3">
+            <div class="card widget-card-1">
+              <div class="card-block-small">
+                <i class="icofont icofont-users-alt-3 bg-l-yellow card1-icon"></i>
+                <span class="text-l-black f-w-600">Users</span>
+                <h4>{{tabsData.users}}</h4>
+                <div>
+                  <span class="f-left m-t-10 ">
+                    <a href="javascript:void(0)" routerLink='/users'>
+                    <i class="text-l-yellow f-16 icofont icofont icofont-info-circle m-r-10"></i>View All
+                  </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- card1 end -->
+          <!-- card1 start -->
+          <div class="col-md-6 col-xl-3">
+            <div class="card widget-card-1">
+              <div class="card-block-small">
+                <i class="icofont icofont icofont-user-male bg-l-black card1-icon"></i>
+                <span class="text-l-black f-w-600">User's Trailer</span>
+                <h4>{{tabsData.users_trailers}}</h4>
+                <div>
+                  <span class="f-left m-t-10 ">
+                    <br>
+                    <!-- <i class="text-l-yellow f-16 icofont icofont icofont-info-circle m-r-10"></i>View All -->
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- card1 end -->
+          <!-- card1 start -->
+          <div class="col-md-6 col-xl-3">
+            <div class="card widget-card-1">
+              <div class="card-block-small">
+                <i class="icofont icofont-truck-loaded bg-l-yellow card1-icon"></i>
+                <span class="text-l-black f-w-600">Active Loads</span>
+                <h4>{{tabsData.active_loads}}</h4>
+                <div>
+                  <span class="f-left m-t-10 ">
+                   <a href="javascript:void(0);" (click)="fetchdata('activeload','Active Loads')">
+                     <i class="text-l-yellow f-16 icofont icofont icofont-info-circle m-r-10"></i>View All
+                   </a> 
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- card1 end -->
+          <!-- card1 start -->
+          <div class="col-md-6 col-xl-3">
+            <div class="card widget-card-1">
+              <div class="card-block-small">
+                <i class="icofont icofont-tick-boxed bg-l-black card1-icon"></i>
+                <span class="text-l-black f-w-600">Completed Loads</span>
+                <h4>{{tabsData.completed_loads}}</h4>
+                <div>
+                  <span class="f-left m-t-10 ">
+                    <a href="javascript:void(0);" (click)="fetchdata('completedload','Completed Loads')">
+                    <i class="text-l-yellow f-16 icofont icofont icofont-info-circle m-r-10"></i>View All
+                  </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- card1 end -->
+          <!-- Marketing Start -->
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-header-left">
+                  <h5>{{dataTitle}}</h5>
+                </div>
+                <!-- <div class="card-header-right">
+                  <ul class="list-unstyled card-option">
+                    <li><i class="icofont icofont-simple-left "></i></li>
+                    <li><i class="icofont icofont-maximize full-card"></i></li>
+                    <li><i class="icofont icofont-minus minimize-card"></i></li>
+                    <li><i class="icofont icofont-refresh reload-card"></i></li>
+                    <li><i class="icofont icofont-error close-card"></i></li>
+                  </ul>
+                </div> -->
+              </div>
+              <div class="card-block marketing-card p-t-0">
+                <app-loads loadtypes='{{loadtype}}'></app-loads>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- Marketing End -->
+      </div>
+    </div>
+  </div>
+</div>

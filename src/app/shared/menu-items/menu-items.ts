@@ -585,16 +585,16 @@ const MENUITEMS = [
       icon: 'ti-direction-alt',
     }]
   },
-  {
-    label:'Setting',
-    main:[ {
-      state: 'membership',
-      short_label: 'S',
-      name: 'Membership',
-      type: 'link',
-      icon: 'ti-layout-list-post',
-    }]
-  },
+  // {
+  //   label:'Setting',
+  //   main:[ {
+  //     state: 'membership',
+  //     short_label: 'S',
+  //     name: 'Membership',
+  //     type: 'link',
+  //     icon: 'ti-layout-list-post',
+  //   }]
+  // },
   // {
   //   label:'Logout',
   //   main:[ {

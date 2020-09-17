@@ -1,0 +1,52 @@
+<div class="table-responsive">
+  <h1 *ngIf="activeLoads.length==0">No Record Found Under this category</h1>
+  <table class="table" *ngIf="activeLoads.length>0">
+    <thead>
+      <tr>
+        <th>Sender Profile</th>
+        <!-- <th>Receiver Name</th>
+        <th>Driver Name</th> -->
+        <th>City</th>
+        <th>Status</th>
+        <th>View</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- <tr>
+        <td colspan="12" class="marketing-header">Latest 5</td>
+      </tr> -->
+      <tr *ngFor="let load of activeLoads; let i = index;">
+        <td>
+          <div class="card-img card-img-main">
+            <div class="initials" *ngIf='load.showinitials'><span style="text-align: center;">{{load.initials}}</span></div>
+            <img class="img-rounded" src="{{load.u_image}}" alt="{{load.u_fullname}}" *ngIf='!load.showinitials'>
+          </div>
+          <div class="table-contain">
+            <h6>{{load.u_fullname}}</h6>
+            <p class="livestock-box m-r-5">Livestock: 10</p>
+            <p class="loads-box m-r-5">Loads: {{load.no_of_loads}}</p>
+            <p class="weight-box m-r-5">weight: {{load.total_weight}} Lbs</p>
+          </div>
+        </td>
+        <!-- <td>
+          <p>John Doe</p>
+        </td>
+        <td>
+          <p>Mark Hensen</p>
+        </td> -->
+        <td>
+          <p class="text-muted">{{load.pickup_address}} <i
+              class="text-l-yellow f-16 icofont icofont icofont-exchange m-r-5 m-l-5"></i> {{load.drop_address}}</p>
+        </td>
+        <td>
+          <i class="text-c-green icofont icofont icofont-flag f-16 m-r-10"></i>{{load.journey_status}}
+        </td>
+        <td>
+          <button class="btn btn-light dropdown-toggle" type="button" routerLink="/users/details/{{load.u_token}}"><i
+              class="icofont icofont-brand-flikr text-muted"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

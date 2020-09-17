@@ -1,0 +1,43 @@
+.bg-l-yellow {
+    background-color: #EAC547;
+}
+.bg-l-black {
+    background-color: #433F33;
+}
+
+.livestock-box {
+    background: #eac547;
+    padding: 0px 6px;
+    font-size: 12px;
+}
+.loads-box {
+    background: #433f33;
+    padding: 0px 6px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.weight-box {
+    background: #eac547;
+    padding: 0px 6px;
+    font-size: 12px;
+}
+.card-img-main{
+    display: inline-block;
+    position: relative;
+    width: auto;
+}
+.img-rounded{
+    width: 53px;
+}
+.initials{
+    width: 55px;
+    height: 55px;
+    border: solid 4px #eac548;
+    border-radius: 50%;
+    padding: 8px;
+    font-size: 20px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}

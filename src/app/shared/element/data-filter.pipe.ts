@@ -9,7 +9,21 @@ export class DataFilterPipe implements PipeTransform {
 
     transform(array: any[], query: string): any {
         if (query) {
-            return _.filter(array, row=>row.name.indexOf(query) > -1);
+            return _.filter(array, row=>row.u_fullname.toLowerCase().indexOf(query) > -1);
+        }
+        return array;
+    }
+}
+
+@Pipe({
+    name: "loadFilter"
+})
+
+export class LoadFilterPipe implements PipeTransform {
+
+    transform(array: any[], query: string): any {
+        if (query) {
+            return _.filter(array, row=>row.u_fullname.toLowerCase().indexOf(query) > -1);
         }
         return array;
     }

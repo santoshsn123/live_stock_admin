@@ -23,6 +23,11 @@ import { AnimalsComponent } from './pages/calculator/animals/animals.component';
 import { TrailerComponent } from './pages/calculator/trailer/trailer.component';
 import { DashboardCustomComponent } from './pages/dashboard-custom/dashboard-custom.component';
 import { MembershipComponent } from './pages/membership/membership.component';
+import { DashboardService } from './service/dashboard/dashboard.service';
+import { LoadsComponent } from './pages/loads/loads.component';
+import { UserDetailsComponent } from './pages/user-details/user-details.component';
+import { LoadsCommanPageComponent } from './pages/loads-comman-page/loads-comman-page.component';
+import { DataTableModule } from 'angular2-datatable';
 
 @NgModule({
   declarations: [
@@ -35,7 +40,10 @@ import { MembershipComponent } from './pages/membership/membership.component';
     AnimalsComponent,
     TrailerComponent,
     DashboardCustomComponent,
-    MembershipComponent
+    MembershipComponent,
+    LoadsComponent,
+    UserDetailsComponent,
+    LoadsCommanPageComponent
   ],
   imports: [
     BrowserModule,
@@ -45,9 +53,10 @@ import { MembershipComponent } from './pages/membership/membership.component';
     SharedModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    DataTableModule
   ],
-  providers: [AuthGuardService,AuthenticationService,CommonService,CalculatorService],
+  providers: [AuthGuardService,AuthenticationService,CommonService,CalculatorService,DashboardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

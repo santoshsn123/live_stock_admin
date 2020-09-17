@@ -12,4 +12,13 @@ export class AuthenticationService {
   getUsers = ()=>{
     return this.http.get(this.common.baseUrl + "?action=getallusers");
   }
+  deleteUser = (id)=>{
+    return this.http.get(this.common.baseUrl + "?action=deleteUser&id="+id);
+  }
+  getsingleUser = data =>{
+    return this.http.post(this.common.baseUrl + "?action=getprofile",data);
+  }
+  getloads = data =>{
+    return this.http.post(this.common.baseUrl + "?action=getload",data);
+  }
 }
